@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Login.aspx.cs" Inherits="SamenSterker.Views.Login" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Main.aspx.cs" Inherits="SamenSterker.Core.Views.Main" %>
 
 <!DOCTYPE html>
 
