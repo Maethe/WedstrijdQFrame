@@ -10,12 +10,14 @@ namespace SamenSterker.Core.DBLayer
     public class DBConnection
     {
         private const string CONNSTRING = @"Server=10.107.1.34 ;Database=WTC; User Id=sa; Password=gregory;";
-        public SqlConnection conn;
+        private SqlConnection connectie;
         private DBConnection instance;
+
+        public SqlConnection Connectie { get; }
 
         private DBConnection()
         {
-            conn = new SqlConnection(CONNSTRING);
+            connectie = new SqlConnection(CONNSTRING);
         }
 
         public DBConnection getInstance()
