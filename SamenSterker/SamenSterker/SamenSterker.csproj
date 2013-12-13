@@ -57,17 +57,25 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Core\Views\Main.aspx" />
     <Content Include="DebugPaginaMaëthé.aspx" />
     <Content Include="Resources\CSS\bootstrap-theme.min.css" />
     <Content Include="Resources\CSS\bootstrap.css" />
     <Content Include="Resources\CSS\bootstrap.min.css" />
     <Content Include="Resources\JS\bootstrap.js" />
     <Content Include="Resources\JS\bootstrap.min.js" />
-    <Content Include="Views\Login.aspx" />
+    <Content Include="Core\Views\Login.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Core\DBLayer\DBConnection.cs" />
+    <Compile Include="Core\Views\Main.aspx.cs">
+      <DependentUpon>Main.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Core\Views\Main.aspx.designer.cs">
+      <DependentUpon>Main.aspx</DependentUpon>
+    </Compile>
     <Compile Include="DebugPaginaMaëthé.aspx.cs">
       <DependentUpon>DebugPaginaMaëthé.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -76,11 +84,11 @@
       <DependentUpon>DebugPaginaMaëthé.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Views\Login.aspx.cs">
+    <Compile Include="Core\Views\Login.aspx.cs">
       <DependentUpon>Login.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Views\Login.aspx.designer.cs">
+    <Compile Include="Core\Views\Login.aspx.designer.cs">
       <DependentUpon>Login.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
