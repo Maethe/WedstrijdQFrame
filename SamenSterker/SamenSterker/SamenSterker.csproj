@@ -70,6 +70,7 @@
   <ItemGroup>
     <Compile Include="Core\DBLayer\DBConnection.cs" />
     <Compile Include="Core\Views\Main.aspx.cs">
+    <Compile Include="Core\DBLayer\DBController.cs" />
       <DependentUpon>Main.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>

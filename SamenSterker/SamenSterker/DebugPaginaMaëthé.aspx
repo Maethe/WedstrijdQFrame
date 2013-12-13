@@ -1,4 +1,4 @@
-﻿<%@ Import Namespace="SamenSterker" %>
+﻿<%@ Import Namespace="SamenSterker.Core.DBLayer" %>
 <%@ Page Language="C#" AutoEventWireup="true" CodeBehind="DebugPaginaMaëthé.aspx.cs" Inherits="SamenSterker.DebugPaginaMaëthé" %>
 
 <!DOCTYPE html>
