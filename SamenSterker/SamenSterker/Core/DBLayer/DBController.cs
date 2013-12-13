@@ -14,7 +14,6 @@ namespace SamenSterker.Core.DBLayer
         public Company getCompanyById(int id)
         {
             DataSet companies = conn.GetTable("Company");
-            fuck this shit
         }
     }
 }
