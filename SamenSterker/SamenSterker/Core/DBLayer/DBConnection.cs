@@ -5,33 +5,28 @@ using System.Data.SqlClient;
 using System.Linq;
 using System.Web;
 
-namespace SamenSterker
+namespace SamenSterker.Core.DBLayer
 {
     public class DBConnection
     {
         private const string CONNSTRING = @"Server=10.107.1.34 ;Database=WTC; User Id=sa; Password=gregory;";
-        private SqlConnection connection;
-        private static DBConnection instance;
+        private static DBConnection instance = new DBConnection();
 
         public SqlConnection Connection { get; set; }
 
         private DBConnection()
         {
-            connection = new SqlConnection(CONNSTRING);
+            Connection = new SqlConnection(CONNSTRING);
         }
 
         public static DBConnection getInstance()
         {
-            if (instance == null)
-            {
-                instance = new DBConnection();
-            }
             return instance;
         }
 
         public DataSet GetTable(string table)
         {
-            SqlDataAdapter dataAdapter = new SqlDataAdapter(@"Select * from WTC." + table, Connection);
+            SqlDataAdapter dataAdapter = new SqlDataAdapter(@"Select * from WTC.dbo." + table, Connection);
             DataSet dataSet = new DataSet();
             dataAdapter.Fill(dataSet);
             return dataSet;
