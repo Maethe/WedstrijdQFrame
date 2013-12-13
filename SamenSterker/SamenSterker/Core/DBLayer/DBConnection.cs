@@ -10,23 +10,31 @@ namespace SamenSterker
     public class DBConnection
     {
         private const string CONNSTRING = @"Server=10.107.1.34 ;Database=WTC; User Id=sa; Password=gregory;";
-        private SqlConnection connectie;
-        private DBConnection instance;
+        private SqlConnection connection;
+        private static DBConnection instance;
 
-        public SqlConnection Connectie { get; }
+        public SqlConnection Connection { get; set; }
 
         private DBConnection()
         {
-            connectie = new SqlConnection(CONNSTRING);
+            connection = new SqlConnection(CONNSTRING);
         }
 
-        public DBConnection getInstance()
+        public static DBConnection getInstance()
         {
             if (instance == null)
             {
                 instance = new DBConnection();
             }
             return instance;
+        }
+
+        public DataSet GetTable(string table)
+        {
+            SqlDataAdapter dataAdapter = new SqlDataAdapter(@"Select * from WTC." + table, Connection);
+            DataSet dataSet = new DataSet();
+            dataAdapter.Fill(dataSet);
+            return dataSet;
         }
     }
 }

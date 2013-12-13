@@ -57,7 +57,7 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Resources\CSS\bootstrap-theme.css" />
+    <Content Include="DebugPaginaMaëthé.aspx" />
     <Content Include="Resources\CSS\bootstrap-theme.min.css" />
     <Content Include="Resources\CSS\bootstrap.css" />
     <Content Include="Resources\CSS\bootstrap.min.css" />
@@ -68,6 +68,13 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Core\DBLayer\DBConnection.cs" />
+    <Compile Include="DebugPaginaMaëthé.aspx.cs">
+      <DependentUpon>DebugPaginaMaëthé.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DebugPaginaMaëthé.aspx.designer.cs">
+      <DependentUpon>DebugPaginaMaëthé.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Views\Login.aspx.cs">
       <DependentUpon>Login.aspx</DependentUpon>
